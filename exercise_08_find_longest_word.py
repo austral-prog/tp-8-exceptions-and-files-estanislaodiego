@@ -27,7 +27,7 @@ def find_longest_word(filename):
         # archivo contiene: "el gato corre rapido\npor el jardin\n"
         find_longest_word("texto.txt") -> "rapido"
     """
-        with open(filename, "r") as archivo:
+    with open(filename, "r") as archivo:
         palabras = archivo.read().split()
         if len(palabras) <= 0:
             raise ValueError("file has no words")
