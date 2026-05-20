@@ -36,9 +36,9 @@ def read_sales(filename):
         lista = archivo.read().split(";")
         for i in lista:
             if len(i) > 0:
-                variable = i.split(";")
-                producto = variable[0]
-                valor = float(variable[1])
+                partes = i.split(";")
+                producto = partes[0]
+                valor = float(partes[1])
                 if producto in diccionario:
                     diccionario[producto].append(valor)
                 else:
