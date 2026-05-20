@@ -35,13 +35,13 @@ def grades_stats(filename):
         }
     """
     diccionario = {}
-    with open (filname, "r") as archivo:
+    with open (filename, "r") as archivo:
         for i in archivo:
             if i.strip() == "":
                 continue
             separado = i.strip().split(":")
             nombre = separado[0]
-            notas = [float(n) for n in separado[1].split(",")]:
+            notas = [float(n) for n in separado[1].split(",")]
             promedio = sum(notas) / len(notas)
             maximo = max(notas)
             minimo = min(notas)
